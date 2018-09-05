@@ -1,0 +1,36 @@
+<?php
+/**
+ * The template for displaying the footer.
+ *
+ * Contains the closing of the #content div and all content after
+ *
+ * @package TheShop
+ */
+?>
+
+		</div>
+	</div><!-- #content -->
+
+	<?php if ( !is_home() ) : ?>
+	<div class="header-promo">
+		<div class="container">
+			<?php theshop_top_promo(); ?>
+		</div>
+	</div>	
+	<?php endif; ?>	
+
+	<?php if ( is_active_sidebar( 'footer-1' ) ) : ?>
+		<?php get_sidebar('footer'); ?>
+	<?php endif; ?>
+
+	<footer id="colophon" class="site-footer" role="contentinfo">
+		<div class="site-info container">
+			<?php do_action('theshop_footer'); ?>
+		</div><!-- .site-info -->
+	</footer><!-- #colophon -->
+</div><!-- #page -->
+
+<?php wp_footer(); ?>
+
+</body>
+</html>
